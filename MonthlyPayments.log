@@ -1,0 +1,1 @@
+Running scheduled command: '/usr/bin/php7.2' 'artisan' payments:monthly > '/var/www/IpponGymWebapp/IpponGym/storage/logs/schedule-73a76af43b8e66e99c9309ab6c8b9da8972cc2b5.log' 2>&1

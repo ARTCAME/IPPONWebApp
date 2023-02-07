@@ -1,0 +1,686 @@
+* {
+    font-family: 'myriad', sans-serif;
+    font-size: 17px;
+    font-weight: 100;
+}
+/* Overwrittin the default values to delete de focus default outlines formats */
+*:focus {
+    outline: -webkit-focus-ring-color auto 0px!important;
+    outline-color: -webkit-focus-ring-color!important;
+    outline-style: auto!important;
+    outline-width: 0px!important;
+}
+a {
+    color: #555555!important;
+    cursor: pointer;
+}
+a:not(.unformated-link),
+.ig-link {
+    color: #707083;
+}
+a:hover:not(.unformated-link):not(.home-nav-btn):not(.ig-asset-item .nav-link),
+.ig-link:hover {
+    animation: shakeColor .05s forwards ease-out;
+    opacity: 1;
+    text-decoration: none;
+}
+a.unformated-link,
+a.unformated-link:active,
+a.unformated-link:focus,
+a.unformated-link:hover {
+    text-decoration: none;
+}
+body {
+    /* margin-bottom: 100px; */
+    padding-top: 132px; /* Gap of the navbars */
+    transition: padding-top .3s;
+}
+body.nav-wzd {
+    padding-top: 0px;
+}
+body.modal-open {
+    padding-right: 0!important;
+}
+/* Class to avoids jumps when no scroll bar exists and modal shown */
+body.modal-open.neutral-scroll {
+    padding-right: 0!important;
+}
+html {
+    height: 100%;
+    overflow-x: hidden; /* Provoques that appear scrollbar on modalopen, added to body */
+    /* Resolving jumps on appear scrollbar */
+    /* width: 100%; */
+    width: 100vw;
+}
+.col-form-label {
+    padding-bottom: calc(0.375rem + 3px);
+}
+.ig-line-height-0 {
+    line-height: 0!important;
+}
+
+/* BACKGROUND-COLOR BASICS */
+.ig-green {
+    background-color: rgba(0, 131, 81, 1);
+}
+.ig-darkpink {
+    background-color: rgba(131, 0, 52, 1);
+}
+.ig-blue {
+    background-color: rgba(0, 50, 131, 1);
+}
+.ig-gold {
+    background-color: rgba(118, 131, 0, 1);
+}
+
+/* GRADIENT BASICS */
+.ig-gradient-1 {
+    background: linear-gradient(65deg, rgba(0, 50, 131, 1) 0, rgba(0, 131, 81, .95) 70%);
+}
+.ig-gradient-2 {
+    background: linear-gradient(65deg, rgba(0, 131, 81, .95) 0, rgba(131, 0, 52, 1) 70%);
+}
+.ig-gradient-3 {
+    background: linear-gradient(65deg, rgba(131, 0, 52, 1) 0, rgba(118, 131, 0, 1) 70%);
+}
+
+/* BELTS VARIANTS AND STYLES*/
+/* .actualizando-cinturones, */
+/* .actualizando-cinturones.btn-cinturon, */
+.actualizando-cinturones.btn-cinturon.btn-sm,
+.btn-cinturon[checked="true"]/* :not(.btn-cinturon-table) */,
+.btn-cinturon.active/* :not(.btn-cinturon-table) */,
+.has-modifs,
+.has-modifs:active,
+.has-modifs:focus,
+.has-modifs:hover {
+    border-color: rgba(255, 60, 60, 1)!important;
+    box-shadow: 0 0 0 2px rgba(255, 60, 60, 1) inset!important;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: box-shadow .3s;
+}
+.actualizando-cinturones,
+.has-modifs {
+    color: rgba(255, 60, 60, 1)!important;
+}
+.descargando-cinturones.btn-cinturon.btn-sm {
+    border-color: rgba(0, 131, 81, 1);
+    box-shadow: 0 0 0 2px rgba(0, 131, 81, 1) inset, 0 0 0 3px rgba(255, 255, 255, 1) inset!important;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: box-shadow .3s;
+}
+/* Styles for the grades buttons on tables or at the socio page */
+.btn-cinturon,
+.btn-cinturon.btn-sm {
+    border-radius: 0.25rem!important;
+    box-shadow: unset!important;
+    /* box-sizing: content-box; */
+
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: unset!important;
+    font-size: 13px!important;
+    height: 25px;
+    line-height: 25px!important;
+    margin: 0 .2rem 0 0;
+    min-width: 65px;
+    padding: 0!important;
+    text-align: center;
+    transition: box-shadow .3s;
+    user-select: none;
+    width: 65px;
+}
+.btn-cinturon-table-static {
+    margin: 0!important;
+}
+/* Different styles for the last one */
+.btn-cinturon.nene:not(.btn-cinturon-table-static) {
+    margin-right: 0rem!important;
+}
+.blbl {
+    background-color:rgba(240,240,240,.8)!important;
+    color: rgba(60, 60, 60, 1)!important;
+}
+.blam {
+    background: linear-gradient(124deg, rgba(240,240,240,.8) 0%, rgba(240,240,240,.8) 50%, rgba(237,252,42,.8) 50%, rgba(237,252,42,.8) 100%)!important;
+    color: rgba(60, 60, 60, 1)!important;
+}
+.amam {
+    background-color: rgba(237,252,42,.8)!important;
+    color: rgba(60, 60, 60, 1)!important;
+}
+.amna {
+    background: linear-gradient(124deg, rgba(237,252,42,.8) 0%, rgba(237,252,42,.8) 50%, rgba(252,144,42,.8) 50%, rgba(252,144,42,.8) 100%)!important;
+    color: rgba(60, 60, 60, 1)!important;
+}
+.nana {
+    background-color: rgba(252,144,42,.8)!important;
+    color: rgba(60, 60, 60, 1)!important;
+}
+.nave {
+    background: linear-gradient(124deg, rgba(252,144,42,.8) 0%, rgba(252,144,42,.8) 50%, rgba(36,161,84,.8) 50%, rgba(36,161,84,.8) 100%)!important;
+    color: rgba(60, 60, 60, 1)!important;
+}
+.veve {
+    background-color: rgba(36,161,84,.8)!important;
+    color: rgba(60, 60, 60, 1)!important;
+}
+.veaz {
+    background: linear-gradient(124deg, rgba(36,161,84,.8) 0%, rgba(36,161,84,.8) 50%, rgba(36,87,161,.8) 50%, rgba(36,87,161,.8) 100%)!important;
+    color: rgba(60, 60, 60, 1)!important;
+}
+.azaz {
+    background-color: rgba(36,87,161,.8)!important;
+    color: rgba(240,240,240,1)!important;
+}
+.azma {
+    background: linear-gradient(124deg, rgba(36,87,161,.8) 0%, rgba(36,87,161,.8) 50%, rgba(133,78,33,.8) 50%, rgba(133,78,33,.8) 100%)!important;
+    color: rgba(240,240,240,1)!important;
+}
+.mama {
+    background-color: rgba(133,78,33,.8)!important;
+    color: rgba(240,240,240,1)!important;
+}
+.mane {
+    background: linear-gradient(124deg, rgba(133,78,33,.8) 0%, rgba(133,78,33,.8) 50%, rgba(34,34,34,.8) 50%, rgba(34,34,34,.8) 100%)!important;
+    color: rgba(240,240,240,1)!important;
+}
+.nene {
+    background-color: rgba(34,34,34,.8)!important;
+    color: rgba(240,240,240,1)!important;
+}
+
+/* CUSTOM MODAL - some properties need to be importanted to overwrite the bootstrap default */
+.modal.ig-custom-modal {
+    height: 100%;
+    width: 100%;
+}
+/* .modal.ig-custom-modal button.close { */
+.modal.ig-custom-modal header.modal-header button.close {
+    font-size: 45px!important;
+    padding: 1rem 2rem;
+}
+.modal.ig-custom-modal header.modal-header {
+    border-bottom: unset!important;
+}
+.modal.ig-custom-modal .modal-body {
+    padding: 1rem 3rem!important;
+    /* padding-bottom: 60px; */
+}
+.modal.ig-custom-modal .modal-content {
+    background: rgba(250, 250, 250, 1);
+    /* background: linear-gradient(-25deg, rgba(250, 250, 250, .8) 0%, rgba(250, 250, 250, 1) 70%); */
+    border-radius: 0;
+    border: 0;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+}
+.modal.ig-custom-modal .modal-dialog {
+    filter: blur(4px)!important;
+    height: 100%;
+    margin: 0;
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0!important;
+    padding: 0;
+    position: fixed;
+    transform: scale(.95)!important;
+    transition: filter .35s ease-in, opacity .3s .05s ease-in, transform 0s .35s ease-in!important; /* Out transition not has transform visible */
+    width: 100%;
+}
+.modal.ig-custom-modal.show .modal-dialog {
+    filter: blur(0px)!important;
+    opacity: 1!important;
+    transform: scale(1)!important;
+    transition: filter .35s ease-in, opacity .3s .05s ease-in, transform .2s ease-in!important;
+}
+.modal-asset-container {
+    margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* CUSTOM INVALIDS */
+.ig-dropdown.is-invalid button,
+.radio-selector.is-invalid label {
+    color: rgba(220, 53, 69, 1)!important;
+    border-color: rgba(220, 53, 69, 1)!important;
+}
+.radio-selector.is-invalid + .invalid-feedback {
+    display: block;
+    color: rgba(220, 53, 69, 1);
+    font-size: 80%;
+    /* width: 100%; */
+}
+
+/* TABLES FILTERS */
+.filter-form-tags {
+    background-color: unset;
+    border: 0!important;
+    border-radius: 0;
+    margin: 0 auto;
+    user-select: none;
+}
+/* The empty tags needs sizes */
+.filter-form-tags.tags-cinturones .filter-tag:not(.tag-ninguno) {
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, .3);
+}
+.filter-form-tags .b-form-tag-content {
+    font-size: 0.875rem!important;
+    padding-right: 5px;
+}
+.filter-form-tags .filter-tag button.b-form-tag-remove {
+    color: #000!important;
+    position: unset!important;
+    right: .5rem;
+    top: .2rem;
+}
+.filter-form-tags span.filter-tag {
+    padding: .2rem;
+}
+.ig-dropdown-horizontal .dropdown-menu {
+    max-width: 725px;
+    width: 300%;
+}
+.ig-dropdown-horizontal label,
+.radiocheckgroup-spaced label {
+    border-radius: .2rem!important;
+    margin: 0 5px 5px 0!important;
+    max-width: 200px;
+}
+.ig-dropdown-horizontal label:nth-child(1),
+.radiocheckgroup-spaced label  {
+    margin-left: 0!important;
+}
+.ig-dropdown-horizontal li {
+    display: block;
+    margin: 5px;
+}
+.ig-dropdown .dropdown-grado {
+    height: 25px;
+    line-height: 1;
+    opacity: .5;
+}
+.ig-dropdown .dropdown-grado.active {
+    opacity: 1;
+}
+.ig-dropdown .filters-button-group {
+    margin: .2rem 1rem!important;
+}
+.ig-dropdown:not(.ig-dropdown-horizontal) .ig-dropdown-item {
+    text-align: left;
+    width: 140px!important;
+}
+.ig-dropdown * {
+    font-size: 0.875rem!important;
+}
+.ig-dropdown li {
+    padding: 0!important;
+}
+.ig-dropdown:not(.ig-dropdown-horizontal) li {
+    display: list-item;
+    width: 140px;
+}
+.ig-dropdown .b-dropdown-form {
+    padding: 0!important;
+}
+.ig-dropdown .dropdown-menu {
+    min-width: unset;
+    padding: 0;
+}
+.ig-dropdown .dropdown-toggle-split {
+    max-height: 32.5px;
+    max-width: 32.5px;
+    width: 32.5px;
+}
+/* Correcting the misalignment */
+.row-busqueda-table {
+    margin-right: 1px!important;
+}
+.sm-radio-group * {
+    font-size: 0.875rem!important
+}
+.tag-cinturones-item {
+    color: transparent!important;
+    width: 45px;
+}
+.tag-ninguno .b-form-tag-content {
+    padding: 0 3px!important;
+}
+
+/* DOCUMENT PRINT */
+.printable-ctn,
+.printable-ctn-preview {
+    position: relative;
+    height: 260mm;
+    width: 180mm;
+}
+.printable-ctn-preview {
+    height: auto;
+}
+/* This hides the element but left there in the page to allow to print it */
+.printable-wrp {
+    height: 0;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 0;
+    z-index: -1;
+}
+
+/* GENERIC - GLOBAL */
+.align-unlabeled {
+    margin-top: calc(26px + .5rem);
+}
+/* Align unlabeled element with labeled elements */
+@media screen and (min-width: 990px) {
+    .align-unlabeled-lg {
+        margin-top: calc(25px + .5rem); /* Vertical align with the labeled elements */
+    }
+}
+/* Square buttons with width and height like sm input */
+.btn-fa-tiny {
+    box-sizing: border-box;
+    height: 32.5px;
+    padding: 0!important;
+    width: 32.5px;
+}
+/* Sets the btn-sm font-size */
+.btn-sm,
+.btn-group-sm > .btn {
+    font-size: 0.875rem!important;
+}
+.control-close-personalizado {
+    line-height: 2!important;
+}
+/* Depends on the previous */
+button.close-personalizado {
+    font-family: arial;
+    height: 5px!important;
+    padding: 0;
+    width: 20px;
+}
+.custom-checkbox .custom-control-label::after,
+.custom-checkbox .custom-control-label::before {
+    margin-left: 0.25rem!important; /* Correcting the non centener label on the 'selected' column of the table */
+}
+/* Sets all the checkbox color to the ippon green */
+.custom-control-input:checked ~ .custom-control-label::before {
+    border-color: rgba(0, 131, 81, 1)!important;
+    background-color: rgba(0, 131, 81, 1)!important;
+}
+.form-agrupation {
+    background-color: rgba(250, 250, 250, 1);
+    border: 2px dashed rgba(205, 205, 205, 1);
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    padding: 1rem;
+}
+input.form-control {
+    text-indent: 0.2rem!important;
+}
+.form-group {
+    /* margin-bottom: 1.5rem; */
+}
+/* Custom correction on the alignment of text and fa icon */
+.ig-fa-inlinetext {
+    font-size: 14px;
+    margin-left: .2rem;
+}
+/* Align text on the buttons */
+.ig-inline-text {
+    font-size: 0.875rem;
+    color: rgba(90, 90, 90, 1);
+}
+/* Custom button style on the popover */
+.ig-modal-return-btn {
+    cursor: pointer;
+    font-size: 0.875rem!important;
+    position: fixed;
+    right: 5rem;
+    top: 1.9rem;
+}
+.ig-modal-table-btn {
+    height: 18px;
+    line-height: 1;
+    padding: 0 8px;
+}
+/* Custom button style */
+.ig-modal-return-btn,
+.ig-small-btn {
+    font-size: 0.875rem!important;
+    height: 22px;
+    line-height: 1;
+    min-width: 35px;
+    padding: 0 8px;
+}
+.ig-small-btn .text {
+    font-size: 0.875rem
+}
+/* Dropdown custom disabled element */
+.ig-select-disabled {
+    background-color: rgba(240, 240, 240, 1);
+    color: #6c757d;
+}
+/* Fake checkbox styles for the tables on the app */
+.ig-table-checkbox {
+    background-color:rgba(250, 250, 250, 1);
+    border: 1px solid rgba(180, 180, 180, 1);
+    color: rgba(180, 180, 180, 1);
+    font-size: 6px;
+    height: 20px;
+    line-height: 1;
+    padding: 0;
+    width: 20px;
+}
+.ig-table-checkbox:active:not(.disabled),
+.ig-table-checkbox:focus:not(.disabled),
+.ig-table-checkbox:hover:not(.disabled) {
+    background-color:rgba(235, 235, 235, 1)!important;
+    border: 1px solid rgba(180, 180, 180, 1)!important;
+    box-shadow: unset!important;
+    color: rgba(180, 180, 180, 1);
+}
+.ig-table-checkbox.ig-checked {
+    background-color: rgba(0, 131, 81, 1)!important;
+    border: 1px solid rgba(0, 131, 81, 1)!important;
+    box-shadow: unset!important;
+    color: rgba(250, 250, 250, 1)!important;
+    font-size: 12px;
+}
+.ig-table-checkbox.ig-checked:active,
+.ig-table-checkbox.ig-checked:focus,
+.ig-table-checkbox.ig-checked:hover {
+    background-color: rgba(0, 131, 81, .8)!important;
+    border: 1px solid rgba(0, 131, 81, 1)!important;
+}
+.ippon-gym {
+    font-size: 25px;
+    color: #008351;
+    letter-spacing: -.04em;
+}
+.ippon-title:hover * {
+    opacity: 1;
+    animation: shakeColor .2s forwards ease-out;
+}
+.ippon-ttl {
+    font-size: 25px;
+    color: #000000;
+    letter-spacing: -.04em;
+    opacity: 1;
+}
+.inline-switch label {
+    margin-top: 3px;
+}
+.invalid-feedback {
+    margin-top: 0!important;
+    position: absolute;
+    width: auto;
+    z-index: 1;
+}
+.label-input-length {
+    position: absolute;
+    right: 0;
+    top: -1.2rem;
+}
+/* Generic class to elements that aren't danger or warning */
+.needs-attention {
+    border-color: rgba(0, 129, 131, 1);
+}
+.needs-attention:focus {
+    border-color: rgba(0, 129, 131, 1);
+    box-shadow: 0 0 0 0.2rem rgba(0, 129, 131, .25);
+}
+.needs-attention-message {
+    color: rgba(0, 129, 131, 1)!important;
+    /* position: absolute; */
+    font-size: 80%;
+}
+.needs-attention-message-danger {
+    color:rgba(255, 60, 60, 1)!important;
+    /* position: absolute; */
+    font-size: 80%;
+}
+/* Pagination */
+li.page-item {
+    padding: 0;
+}
+/* Formating the content of the save-csv component (font-awesome normally)
+.save-csv {
+    font-size: 0.875rem;
+} */
+.short-focus {
+    animation: 1s short-focus ease;
+}
+/* Custom title text with big format */
+.subtitle {
+    color: rgba(0, 0, 0, .2);
+    font-size: calc(40px + (70 - 40) * ((100vw - 300px) / (1600 - 300))); /* minsize + (max-min) * (maxvw - minvw) * (maxpx - minpx) */
+    /* height: calc(20px + (70 - 40) * ((100vw - 300px) / (1600 - 300))); minsize + (max-min) * (maxvw - minvw) * (maxpx - minpx) */
+    letter-spacing: -.04em;
+    line-height: calc(40px + (70 - 40) * ((100vw - 300px) / (1600 - 300))); /* 40px 50px */;
+    /* line-height: 1; */
+    margin-bottom: 1rem;
+    user-select: none;
+}
+/* Custom subtitle smaller format */
+.subtitle-sub {
+    font-size: calc(25px + (40 - 25) * ((100vw - 300px) / (1600 - 300))); /* minsize + (max-min) * (maxvw - minvw) * (maxpx - minpx) */
+    line-height: 30px /* 50px */;
+}
+.table-text-overflowed {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tabs li {
+    padding: 5px 5px 0!important;
+}
+.tooltip {
+    /* z-index: 950!important; */
+}
+/* Sets the tooltips text */
+.tooltip > .tooltip-inner,
+.tooltip > .tooltip-inner * {
+    font-size: 14px;
+}
+/* Styles for removable wrappers of form groups */
+.wrapper-dismissible {
+    position: relative;
+    height: auto; /* Necessary to the fade-height transition */
+    overflow: hidden;
+}
+.wrapper-dismissible-close {
+    position: absolute;
+    right: .5rem;
+    top: .2rem;
+}
+#app {
+    min-width: 100%;
+    width: 100%;
+}
+#ls-mutation-alert .close {
+    height: 100%!important;
+}
+
+/* ANIMATIONS */
+@keyframes shakeColor {
+    0% {
+        filter: blur(1px);
+        transform: translateX(0.01rem);
+    }
+    25% {
+        transform: translateX(0.05rem);
+    }
+    75% {
+        transform: translateX(-0.05rem);
+    }
+    100% {
+        color: rgba(0, 131, 81, 1);
+        filter: blur(0px);
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
+@keyframes short-focus {
+    0% {
+        box-shadow: 0px 0px 0px 0px rgba(0, 131, 81, .6), 0px 0px 0px 0px rgba(0, 131, 81, .6),  0px 0px 0px 0px rgba(0, 131, 81, .6),  0px 0px 0px 0px rgba(0, 131, 81, .6);
+    }
+    50% {
+        box-shadow: 1px -1px 1px 2px rgba(0, 131, 81, .4), 1px 1px 1px 2px rgba(0, 131, 81, .4), -1px 1px 1px 2px rgba(0, 131, 81, .4), -1px -1px 1px 2px rgba(0, 131, 81, .4)
+    }
+    100% {
+        box-shadow: 0px 0px 0px 0px rgba(0, 131, 81, .6), 0px 0px 0px 0px rgba(0, 131, 81, .6),  0px 0px 0px 0px rgba(0, 131, 81, .6),  0px 0px 0px 0px rgba(0, 131, 81, .6);
+    }
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+    .modal.ig-custom-modal .modal-body{
+        padding: 1rem .3rem!important;
+    }
+   /* This two properties are adding a padding top at the first level elements of a form-row neutralizing the not useful by adding minus value to the parent */
+    .form-row {
+        margin-top: -.25rem;
+    }
+    .form-row > * {
+        margin-top: .25rem;
+    }
+}
+@media screen and (min-width: 576px) {
+    #main-alta.card-columns {
+        -webkit-column-count:2;
+        column-count:2;
+    }
+    .card-columns {
+        -webkit-column-count:2;
+        column-count:2;
+    }
+}
+/* QUARANTINE */
+/* .ig-subtitle-align {
+    margin-top: calc(40px + (70 - 40) * ((100vw - 300px) / (1600 - 300)));
+} */
+/* .card {
+    box-shadow: 0 0 0 0 grey;
+    transition: box-shadow .2s ease-out;
+} */
+
+/* .ig-background {
+    background-color: rgba(0, 131, 81, 0.15)!important;
+}
+.ig-gradient {
+    background: linear-gradient(to right, rgba(0, 50, 131, .95) 0, rgba(0, 131, 81, .95) 50%);
+}
+.ig-gradient-background {
+    background: linear-gradient(to right, rgba(0, 50, 131, .15) 0, rgba(0, 131, 81, .15) 50%);
+}
+ */

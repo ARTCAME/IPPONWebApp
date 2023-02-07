@@ -1,0 +1,208 @@
+
+/* Used on the form fields to show the errors */
+.alert-height-enter-active,
+.alert-height-leave-active {
+    overflow: hidden;
+    max-height: 250px;
+    transition: all .35s ease;
+}
+.alert-height-enter, .alert-height-leave-to {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-5px);
+}
+/* Used on the list-group-item to show the errors, is not perfect... */
+.list-height-enter-active,
+.list-height-leave-active,
+.list-height-move {
+    overflow: hidden;
+    transition-property: opacity;
+    transition: .3s ease;
+}
+.list-height-enter,
+.list-height-leave-to {
+    overflow: hidden;
+    opacity: 0;
+}
+.list-height-enter-to {
+    opacity: 1;
+}
+.list-height-leave-active {
+    position: absolute;
+}
+
+.blur-in-enter-active,
+.blur-in-leave-active {
+    transition: opacity .3s ease,  blur .3s ease;
+}
+.blur-in-enter,
+.blur-in-leave-to {
+    filter: blur(5px);
+    opacity: 0;
+}
+.blur-in-out-enter-active,
+.blur-in-out-leave-active {
+    transition: opacity .3s ease,  blur .1s .2s ease;
+}
+.blur-in-out-enter,
+.blur-in-out-leave-to {
+    filter: blur(1px);
+    opacity: 0;
+}
+/***
+USED ??
+ .fade-absolute-enter,
+.fade-absolute-leave-to {
+    opacity: 0;
+    position: absolute;
+}
+.fade-absolute-enter-active,
+.fade-absolute-leave-active {
+    position: absolute;
+    transition: all .2s;
+}
+***/
+/* Opacity transition */
+.fade-enter{
+    opacity: 0;
+}
+.fade-enter-active{
+    transition: opacity .2s;
+}
+.fade-leave-active{
+    transition: opacity .2s;
+    opacity: 0;
+}
+/* Opacity transition */
+.fade-delayed-enter{
+    opacity: 0;
+}
+.fade-delayed-enter-active{
+    transition: .5s opacity .2s;
+}
+.fade-delayed-leave-active{
+    transition: opacity .2s;
+    opacity: 0;
+}
+/* Transition the height on auto height elements (similar to bootstrap collapse) */
+.ig-trans-fh {
+    /* position: relative; */
+    height: auto; /* Necessary to the fade-height transition */
+    overflow: hidden;
+}
+.fade-height-enter-to,
+.fade-height-leave {
+    max-height: 800px;
+    transition: all .35s ease;
+}
+.fade-height-enter,
+.fade-height-leave-to {
+    max-height: 0;
+    opacity: 0;
+    transition: all .35s ease, opacity .5 ease;
+}
+/* Fade translating from the right */
+.slide-fade-enter-active,
+.slide-fade-leave-active{
+    transition: all .3s .006s ease;
+}
+.slide-fade-enter,
+.slide-fade-leave-to {
+    opacity: 0;
+    transform: translateX(10px);
+}
+.left-slide-fade-enter-active,
+.left-slide-fade-leave-active {
+    transition: all .3s .006s ease;
+}
+.left-slide-fade-enter,
+.left-slide-fade-leave-to {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+/* USED ??
+.slide-fade-absolute-leave-active {
+    position: absolute;
+}
+.slide-fade-absolute-enter,
+.slide-fade-absolute-enter-active,
+.slide-fade-absolute-leave-to {
+    opacity: 0;
+    transform: translateX(10px);
+} */
+/* Transition the bottom fixed buttons wich launch the news or documentation */
+.launcher-appear-enter-active,
+.launcher-appear-leave-active {
+    transition: left 1.5s ease-in,  blur 1.5s ease-in;
+}
+.launcher-appear-enter,
+.launcher-appear-leave-to {
+    left: -3rem!important;
+    filter: blur(5px);
+    opacity: 0;
+}
+
+/* Used on the form fields to show the errors */
+.liveFeedbacks-enter-active,
+.liveFeedbacks-leave-active {
+    transition: all .3s ease;
+}
+.liveFeedbacks-enter, .liveFeedbacks-leave-to {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+/* Used on the form fields of the editable tables to show the errors */
+.liveFeedbacks-table-enter-active,
+.liveFeedbacks-table-leave-active {
+    /* position: absolute; */
+    transition: all .3s ease;
+}
+.liveFeedbacks-table-enter,
+.liveFeedbacks-table-leave-to {
+    display:block;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+/***
+USED ??
+.table-alert-fade-enter,
+.table-alert-fade-leave-active {
+    opacity: 0;
+    transition: all .1s;
+}
+.table-alert-fade-enter-active,
+.table-alert-fade-leave-active {
+    position: absolute;
+}
+****/
+/* Wizard specific transitions */
+.wizard-blur-in-enter-active,
+.wizard-blur-in-leave-active {
+    transition: filter .35s ease-in, opacity .3s .05s ease-in;
+}
+.wizard-blur-in-enter,
+.wizard-blur-in-leave-to {
+    filter: blur(4px);
+    opacity: 0;
+}
+.wizard-btns-enter-active,
+.wizard-btns-leave-active {
+    transition: filter .35s 1s ease-in, opacity .35s 1s ease-in;
+}
+.wizard-btns-enter,
+.wizard-btns-leave-to {
+    filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+}
+.wzd-launcher-appear-enter-active,
+.wzd-launcher-appear-leave-active {
+    transition: right 1s ease,  blur 1s ease;
+}
+.wzd-launcher-appear-enter,
+.wzd-launcher-appear-leave-to {
+    right: -3rem!important;
+    filter: blur(5px);
+    opacity: 0;
+}

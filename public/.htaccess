@@ -1,0 +1,29 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+#    RewriteBase /var/www/IpponGymWebapp/IpponGym/public
+#    RewriteCond %{HTTP:UPGRADE} ^WebSocket$ [NC]
+#    RewriteCond %{HTTP:CONNECTION} ^Upgrade$ [NC]
+#    RewriteRule .* wss://localhost:8080%{REQUEST_URI} [P]
+    RewriteBase /
+
+    # Handle Authorization Header
+    # RewriteCond %{HTTP:Authorization} .
+    # RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+    RewriteCond %{HTTP:Authorization} ^(.*)
+    RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+    #RewriteRule /ws/(.*)           wss://localhost:9000/$1 [P,L]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
